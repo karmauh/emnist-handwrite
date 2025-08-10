@@ -1,0 +1,21 @@
+seed: 1337
+data:
+  root: data
+  split: balanced
+  subset: digits
+  batch_size: 128
+  num_workers: 4
+  pin_memory: true
+  drop_last: false
+  train_val_split: 0.9
+train:
+  epochs: 8
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  optimizer: adam
+  scheduler: cosine
+  label_smoothing: 0.0
+infer:
+  topk: 5
+  onnx: false
+  quantized: false
