@@ -1,4 +1,5 @@
 import os
+import json
 import torch
 import torch.nn.functional as F
 from PIL import Image, ImageOps
@@ -25,6 +26,11 @@ class Predictor:
             transforms.Normalize((0.1307,), (0.3081,))
         ])
         self.align_emnist = align_emnist
+        self.temperature = 1.0
+        calib_path = os.path.join("data","models","calib.json")
+        if os.path.exists(calib_path):
+            with open(calib_path, "r", encoding="utf-8") as f:
+                self.temperature = float(json.load(f).get("temperature", 1.0))
 
     def _align(self, img):
         return ImageOps.mirror(img).rotate(90, expand=False) if self.align_emnist else img
