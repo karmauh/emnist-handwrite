@@ -11,6 +11,17 @@ Eksport modelu do formatu ONNX oraz kwantyzacja
 Obsługa pustych lub niejednoznacznych rysunków
 Konfigurowalne parametry treningu w plikach YAML
 
+# Diagnostyka danych
+Szybkie narzędzia podglądu i debugowania:
+
+# Podgląd próbek po transformacjach
+python notebooks/inspect_sample.py
+python notebooks/inspect_preprocess.py
+python scripts/dump_batch.py
+data/debug/batch_grid.png
+python scripts/label_stats.py
+
+
 # Wymagania
 Python 3.11+
 PyTorch z obsługą CUDA 12.1 (opcjonalnie CPU)
