@@ -21,6 +21,12 @@ python scripts/dump_batch.py
 data/debug/batch_grid.png  
 python scripts/label_stats.py  
 
+# Wizualizacja metryk treningu
+python scripts/plot_metrics.py  
+
+# Wyniki
+data/debug/metrics_loss.png  
+data/debug/metrics_acc.png  
 
 # Wymagania
 Python 3.11+  
