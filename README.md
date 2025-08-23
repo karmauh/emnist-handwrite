@@ -9,7 +9,21 @@ Interfejs webowy w Gradio z obsługą rysowania w panelu canvas
 Prezentacja Top-k predykcji z prawdopodobieństwami  
 Eksport modelu do formatu ONNX oraz kwantyzacja  
 Obsługa pustych lub niejednoznacznych rysunków  
-Konfigurowalne parametry treningu w plikach YAML  
+Konfigurowalne parametry treningu w plikach YAML
+
+# Wydajność i wdrożenie (ONNX, INT8)
+Eksport do ONNX  
+```
+python -m src.export_onnx
+```
+Kwantyzacja (INT8)
+```
+python -m scripts.quantize_onnx
+```
+Benchmark CPU (średnie opóźnienie na próbkę)
+```
+python scripts/bench_onnx.py
+```
 
 # Diagnostyka danych
 Szybkie narzędzia podglądu i debugowania:
